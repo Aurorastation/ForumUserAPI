@@ -1,0 +1,8 @@
+/vendor
+/config/private.pem
+/config/public.pem
+/.idea
+Homestead.json
+Homestead.yaml
+.env
+.phpunit.result.cache
