@@ -6,7 +6,7 @@ A simple and relativey lightweight API used by various Aurora Bots to query the 
 
 Generate a RSA Keypair and place it in the config folder (named public.pem and private.pem)
 
-Use the console command `php artisan jwt:generatetoken [endpoint]` to generate a authentication token for a specified endpoint.
+Use the console command `php artisan jwt:generatetoken [client_name]` to generate a authentication token for a specified client.
 
 Set the `Authorization: Bearer [token]` header in your requests to the API
 
