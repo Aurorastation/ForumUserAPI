@@ -38,9 +38,9 @@ class UserController extends Controller
 
     public function getStaff(Request $request, $role){
         //Fetch Staff List
-        $query_data = ["groupid"=>intval($role)];
+        $query_data = ["groupid"=>intval($role),"groupid2"=>$role];
 
-        $data = DB::select('SELECT * FROM view_userdata WHERE forum_primary_group = :groupid OR FIND_IN_SET(":groupid",forum_secondary_groups)', $query_data);
+        $data = DB::select('SELECT * FROM view_userdata WHERE forum_primary_group = :groupid OR FIND_IN_SET(:groupid2,forum_secondary_groups)', $query_data);
 
         return response()->json($data,200);
     }
